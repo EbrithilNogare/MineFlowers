@@ -1,4 +1,4 @@
-- name: Unity - Builder
+name: Unity - Builder
   # You may pin to the exact commit or the version.
   # uses: game-ci/unity-builder@0efa1855a3c37ab64c3a9e221a939a967932923c
   uses: game-ci/unity-builder@v2.2.0
