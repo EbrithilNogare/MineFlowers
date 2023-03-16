@@ -1,6 +1,6 @@
 name: Try Activation
 
-on: []
+on: [workflow_dispatch]
 
 jobs:
   tryActivation:
