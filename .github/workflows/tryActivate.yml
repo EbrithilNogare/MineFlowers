@@ -1,2 +1,10 @@
-name: Unity - Activate
-uses: game-ci/unity-activate@v2.0.0
+name: Try Activation
+
+on: []
+
+jobs:
+  tryActivation:
+    name: Try Activation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: game-ci/unity-activate@v2.0.0
