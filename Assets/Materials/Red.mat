@@ -117,7 +117,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Glowing_edge_size: 0.02
-    - _IsFarAway: 1
+    - _IsFarAway: 0
     - _Max_Distance: 11
     - _Metallic: 0
     - _Min_Distance: 10
