@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.4156863, g: 0.6, b: 0.8117648, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.03
@@ -180,7 +180,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: b53bee5258b04e8498771aa3a948c7c3, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: 8919317bb47c2194c84412782ef36103, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
@@ -1220,6 +1220,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DEMO Environment
+      objectReference: {fileID: 0}
+    - target: {fileID: 120446779813399004, guid: ab71a1aaeaa814948872fde1bce6f43f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 120446780672026746, guid: ab71a1aaeaa814948872fde1bce6f43f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ab71a1aaeaa814948872fde1bce6f43f, type: 3}
