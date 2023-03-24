@@ -67,3 +67,7 @@ Thumbs.db.meta
 
 # VS Code
 *.vscode
+
+# Large imports
+[Aa]ssets/LargeImports*
+
