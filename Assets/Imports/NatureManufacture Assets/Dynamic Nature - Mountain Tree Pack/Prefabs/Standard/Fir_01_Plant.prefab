@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4428141364687994}
   - component: {fileID: 205191526581301100}
-  - component: {fileID: 7533056318079416031}
   m_Layer: 0
   m_Name: Fir_01_Plant
   m_TagString: Untagged
@@ -63,20 +62,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 2324455557664817001}
   m_Enabled: 1
---- !u!136 &7533056318079416031
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1862648418451654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 40
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4279543205390090223
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,6 +240,7 @@ GameObject:
   - component: {fileID: 6297333803278901446}
   - component: {fileID: 6297333803275509984}
   - component: {fileID: 6297333803276476960}
+  - component: {fileID: 5328781308522912921}
   m_Layer: 0
   m_Name: Fir_01_plant_LOD0
   m_TagString: Untagged
@@ -328,3 +314,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &5328781308522912921
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6297333803278417126}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.15
+  m_Height: 5.506136
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.6, z: 0}
