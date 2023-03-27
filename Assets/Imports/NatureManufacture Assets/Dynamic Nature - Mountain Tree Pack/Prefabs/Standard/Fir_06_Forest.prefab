@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4935832744287028}
   - component: {fileID: 205592226486074404}
-  - component: {fileID: 1616041726184795126}
   m_Layer: 0
   m_Name: Fir_06_Forest
   m_TagString: Untagged
@@ -73,20 +72,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 3548929797506333674}
   m_Enabled: 1
---- !u!136 &1616041726184795126
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157250216034030}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 40
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &356321918558306722
 GameObject:
   m_ObjectHideFlags: 0

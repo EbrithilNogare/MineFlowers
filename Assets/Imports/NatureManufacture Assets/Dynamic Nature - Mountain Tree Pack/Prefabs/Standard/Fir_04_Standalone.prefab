@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4823332510797992}
   - component: {fileID: 205222597192925426}
-  - component: {fileID: -4912394452473096562}
   m_Layer: 0
   m_Name: Fir_04_Standalone
   m_TagString: Untagged
@@ -73,20 +72,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1114239981316093688}
   m_Enabled: 1
---- !u!136 &-4912394452473096562
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508632783637986}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 40
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3125624756576763728
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4606853723561682}
   - component: {fileID: 205838414078788140}
-  - component: {fileID: 2218788361080089324}
   m_Layer: 0
   m_Name: Fir_08_Dead_Forest_cheap
   m_TagString: Untagged
@@ -73,20 +72,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 1615674997473175386}
   m_Enabled: 1
---- !u!136 &2218788361080089324
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442081961505338}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.3
-  m_Height: 40
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3282587313570132709
 GameObject:
   m_ObjectHideFlags: 0
