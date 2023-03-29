@@ -504,6 +504,11 @@ PrefabInstance:
       propertyPath: FootstepAudioVolume
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7984200603466383096, guid: 64dce48905ffd9b4293e595fa6941544,
+        type: 3}
+      propertyPath: material
+      value: 
+      objectReference: {fileID: 2100000, guid: 42cf4c92ea32c364b9b002c1f0d005d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
 --- !u!1 &2061879688
