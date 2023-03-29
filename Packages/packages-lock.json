@@ -1,9 +1,9 @@
 {
   "dependencies": {
     "com.cyanilux.urp-blitrenderfeature": {
-      "version": "file:D:/Unity add-ons/URP_BlitRenderFeature-master",
+      "version": "file:URP_BlitRenderFeature-master",
       "depth": 0,
-      "source": "local",
+      "source": "embedded",
       "dependencies": {}
     },
     "com.unity.burst": {

@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.cyanilux.urp-blitrenderfeature": "file:D:/Unity add-ons/URP_BlitRenderFeature-master",
+    "com.cyanilux.urp-blitrenderfeature": "./URP_BlitRenderFeature-master",
     "com.unity.cinemachine": "2.8.6",
     "com.unity.collab-proxy": "1.15.18",
     "com.unity.feature.development": "1.0.1",
