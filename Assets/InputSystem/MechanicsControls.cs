@@ -35,6 +35,42 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""PressX"",
+                    ""type"": ""Button"",
+                    ""id"": ""9869c433-7617-4cf8-b072-8307eb0b6190"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PressY"",
+                    ""type"": ""Button"",
+                    ""id"": ""7812a473-d6ff-46f3-b683-0cccfcfc3a6d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PressA"",
+                    ""type"": ""Button"",
+                    ""id"": ""bd87e157-9607-4be3-befd-0282a74b750d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PressB"",
+                    ""type"": ""Button"",
+                    ""id"": ""2f415f7a-e6a3-4d7c-aee3-566bdaab73a4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -147,6 +183,83 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""25724387-6e90-4d65-905e-d103f1ecd203"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39f9ce0e-d97b-464d-be05-da486b5c5287"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressX"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7cfb23b9-6d6c-4a1a-9b62-cd7b4d71c26c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c8a769d-de98-4e83-8c23-050374144175"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressA"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33078285-ee50-4825-9da0-acafde1fc5ef"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": ""Press"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""923841bf-fcea-4d7d-88f1-51f5808511ab"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressB"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""eea8370d-5811-46d6-a515-45bf62359d8f"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""PressY"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -156,6 +269,10 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
         // Pirouette
         m_Pirouette = asset.FindActionMap("Pirouette", throwIfNotFound: true);
         m_Pirouette_Move = m_Pirouette.FindAction("Move", throwIfNotFound: true);
+        m_Pirouette_PressX = m_Pirouette.FindAction("PressX", throwIfNotFound: true);
+        m_Pirouette_PressY = m_Pirouette.FindAction("PressY", throwIfNotFound: true);
+        m_Pirouette_PressA = m_Pirouette.FindAction("PressA", throwIfNotFound: true);
+        m_Pirouette_PressB = m_Pirouette.FindAction("PressB", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -216,11 +333,19 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Pirouette;
     private IPirouetteActions m_PirouetteActionsCallbackInterface;
     private readonly InputAction m_Pirouette_Move;
+    private readonly InputAction m_Pirouette_PressX;
+    private readonly InputAction m_Pirouette_PressY;
+    private readonly InputAction m_Pirouette_PressA;
+    private readonly InputAction m_Pirouette_PressB;
     public struct PirouetteActions
     {
         private @MechanicsControls m_Wrapper;
         public PirouetteActions(@MechanicsControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Pirouette_Move;
+        public InputAction @PressX => m_Wrapper.m_Pirouette_PressX;
+        public InputAction @PressY => m_Wrapper.m_Pirouette_PressY;
+        public InputAction @PressA => m_Wrapper.m_Pirouette_PressA;
+        public InputAction @PressB => m_Wrapper.m_Pirouette_PressB;
         public InputActionMap Get() { return m_Wrapper.m_Pirouette; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -233,6 +358,18 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnMove;
+                @PressX.started -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressX;
+                @PressX.performed -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressX;
+                @PressX.canceled -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressX;
+                @PressY.started -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressY;
+                @PressY.performed -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressY;
+                @PressY.canceled -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressY;
+                @PressA.started -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressA;
+                @PressA.performed -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressA;
+                @PressA.canceled -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressA;
+                @PressB.started -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressB;
+                @PressB.performed -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressB;
+                @PressB.canceled -= m_Wrapper.m_PirouetteActionsCallbackInterface.OnPressB;
             }
             m_Wrapper.m_PirouetteActionsCallbackInterface = instance;
             if (instance != null)
@@ -240,6 +377,18 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @PressX.started += instance.OnPressX;
+                @PressX.performed += instance.OnPressX;
+                @PressX.canceled += instance.OnPressX;
+                @PressY.started += instance.OnPressY;
+                @PressY.performed += instance.OnPressY;
+                @PressY.canceled += instance.OnPressY;
+                @PressA.started += instance.OnPressA;
+                @PressA.performed += instance.OnPressA;
+                @PressA.canceled += instance.OnPressA;
+                @PressB.started += instance.OnPressB;
+                @PressB.performed += instance.OnPressB;
+                @PressB.canceled += instance.OnPressB;
             }
         }
     }
@@ -247,5 +396,9 @@ public partial class @MechanicsControls : IInputActionCollection2, IDisposable
     public interface IPirouetteActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnPressX(InputAction.CallbackContext context);
+        void OnPressY(InputAction.CallbackContext context);
+        void OnPressA(InputAction.CallbackContext context);
+        void OnPressB(InputAction.CallbackContext context);
     }
 }
