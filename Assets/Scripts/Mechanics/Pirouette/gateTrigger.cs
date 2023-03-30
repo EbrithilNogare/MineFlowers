@@ -6,31 +6,47 @@ using UnityEngine.InputSystem;
 
 public class gateTrigger : MonoBehaviour
 {
-    bool clear = false;
-    int index = 0;
+    public bool playerNearby = false;
+    public string correctButton = "X";
 
-    // Start is called before the first frame update
-    void Start()
+    public void checkX(InputAction.CallbackContext context)
     {
+        Debug.Log("check");
+        if (playerNearby && "X" == correctButton)
+            gameObject.SetActive(false);
+    }
+    public void checkY(InputAction.CallbackContext context)
+    {
+        Debug.Log("check");
+        if (playerNearby && "Y" == correctButton)
+            gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void checkA(InputAction.CallbackContext context)
     {
+        Debug.Log("check");
+        if (playerNearby && "A" == correctButton)
+            gameObject.SetActive(false);
+    }
 
+    public void checkB(InputAction.CallbackContext context)
+    {
+        Debug.Log("check");
+        if (playerNearby && "B" == correctButton)
+            gameObject.SetActive(false);
     }
 
 
 
-    public void checkAndClearPath(string input)
+    private void OnTriggerEnter2D()
     {
-        Debug.Log(this.transform.GetChild(index).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text);
-        clear = this.transform.GetChild(index).transform.GetChild(0).GetComponent<gateClear>().GetClearVal();
-        Debug.Log("CONTROLLER: " + input + " ||| " + clear);
-        if (clear && (this.transform.GetChild(index).transform.GetChild(1).GetComponent<TextMeshProUGUI>().text == input))
-        {
-            this.transform.GetChild(index).gameObject.SetActive(false);
-            index++;
-        }
+        Debug.Log("OnTriggerEnter");
+        playerNearby = true;
     }
+    private void OnTriggerExit2D()
+    {
+        Debug.Log("OnTriggerExit");
+        playerNearby = false;
+    }
+
 }

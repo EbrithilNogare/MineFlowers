@@ -33,8 +33,19 @@ public class EnemyStalkerController : MonoBehaviour
         float angle = moveSpeed * Time.deltaTime;
         float wholeDistance = Vector3.Distance(startPosition, endPosition);
         float remainingDistance = Vector3.Distance(transform.localPosition, endPosition);
-        transform.localPosition = Vector3.MoveTowards(transform.localPosition, endPosition, angle / 360 / 3 * wholeDistance / remainingDistance);
-        transform.RotateAround(realEndPosition, Vector3.forward, -angle / remainingDistance);
+        if (remainingDistance > .01)
+        {
+            transform.localPosition = Vector3.MoveTowards(transform.localPosition, endPosition, angle / 360 / 3 * wholeDistance / remainingDistance);
+            transform.RotateAround(realEndPosition, Vector3.forward, -angle / remainingDistance);
+        }
 
     }
+
+    private void OnTriggerEnter2D()
+    {
+
+        Debug.Log("You lost!");
+
+    }
+
 }
