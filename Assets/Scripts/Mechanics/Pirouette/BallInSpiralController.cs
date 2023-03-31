@@ -5,16 +5,21 @@ using UnityEngine.InputSystem;
 
 public class BallInSpiralController : MonoBehaviour
 {
+    public GameObject Enemy;
+    public GameObject Finish;
+    public float speed = 20;
+
     private Vector2 moveVector = Vector2.zero;
     private Rigidbody2D sphereRigidBody = null;
-    float speed = 50f;
+
+    private void Start()
+    {
+        speed *= Vector3.Distance(Enemy.transform.position, Finish.transform.position);
+    }
 
     private void Awake()
     {
         sphereRigidBody = GetComponent<Rigidbody2D>();
-
-
-
     }
 
     private void OnEnable()
@@ -24,6 +29,7 @@ public class BallInSpiralController : MonoBehaviour
 
     private void OnDisable()
     {
+
     }
 
     private void FixedUpdate()
@@ -33,6 +39,5 @@ public class BallInSpiralController : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         moveVector = context.ReadValue<Vector2>();
-
     }
 }
