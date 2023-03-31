@@ -9,6 +9,12 @@ public class gateTrigger : MonoBehaviour
     public bool playerNearby = false;
     public string correctButton = "X";
 
+    public void Start()
+    {
+        generateRandomGateLetter();
+        this.transform.GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = correctButton;
+    }
+
     public void checkX(InputAction.CallbackContext context)
     {
         Debug.Log("check");
@@ -47,6 +53,17 @@ public class gateTrigger : MonoBehaviour
     {
         Debug.Log("OnTriggerExit");
         playerNearby = false;
+    }
+
+    private void generateRandomGateLetter()
+    {
+        int index = Random.Range(0, 4);
+        correctButton = ((Buttons)index).ToString();
+    }
+
+    enum Buttons
+    {
+        X, Y, B, A
     }
 
 }
