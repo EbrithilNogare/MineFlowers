@@ -9,6 +9,8 @@ public class EnemyStalkerController : MonoBehaviour
     public GameObject Finish;
     public GameObject canvas;
     public GameObject gates;
+    public GameObject player;
+
 
     private Vector3 localStartPosition;
     private Vector3 globalStartPosition;
@@ -18,7 +20,6 @@ public class EnemyStalkerController : MonoBehaviour
     private Vector3 resetStartPositionPlayer;
     private const float turns = 3;
 
-    public GameObject player;
 
     void Start()
     {
@@ -47,11 +48,8 @@ public class EnemyStalkerController : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter2D()
+    public void ResetGame()
     {
-
-        Debug.Log("You lost!");
-        //canvas.SetActive(false);
         transform.localPosition = localStartPosition;
         player.transform.localPosition = resetStartPositionPlayer;
         duration *= 1.1f;
@@ -60,6 +58,13 @@ public class EnemyStalkerController : MonoBehaviour
         {
             gates.transform.GetChild(i).gameObject.SetActive(true);
         }
+    }
+
+
+    private void OnTriggerEnter2D()
+    {
+        ResetGame();
+
     }
 
 }
