@@ -15,20 +15,29 @@ jobs:
         targetPlatform:
           - WebGL # WebGL.
     steps:
-      - uses: actions/checkout@v2
+      # Checkout
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
           lfs: false
-      - uses: actions/cache@v2
+          
+      # Cache
+      - uses: actions/cache@v3
         with:
           path: Library
-          key: Library-${{ matrix.targetPlatform }}
-          restore-keys: Library-
+          key: Library-${{ matrix.targetPlatform }}-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-${{ matrix.targetPlatform }}-
+            Library-
+          
+      # Build
       - uses: game-ci/unity-builder@v2
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: ${{ matrix.targetPlatform }}
+          
+      # Output
       - uses: actions/upload-artifact@v2
         with:
           name: Build-${{ matrix.targetPlatform }}
