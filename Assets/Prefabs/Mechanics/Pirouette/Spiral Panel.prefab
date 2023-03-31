@@ -1399,6 +1399,7 @@ GameObject:
   - component: {fileID: 3518286868477721439}
   - component: {fileID: 3518286868477721433}
   - component: {fileID: 3518286868477721432}
+  - component: {fileID: 8900898134009663720}
   m_Layer: 5
   m_Name: Spiral Panel
   m_TagString: Untagged
@@ -1470,6 +1471,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &8900898134009663720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518286868477721438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97b6cf4749fe2a2498cecbcfee0d8ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerBall: {fileID: 3518286868311138113}
+  enemyBall: {fileID: 3518286869300982897}
+  gates: {fileID: 3518286869364517416}
 --- !u!1 &3518286868830403108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2118,7 +2134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce349a124a7cd5044bba8d16131f017c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 0}
+  canvas: {fileID: 3518286868477721438}
+  playerHuman: {fileID: 0}
 --- !u!114 &3518286869404032850
 MonoBehaviour:
   m_ObjectHideFlags: 0

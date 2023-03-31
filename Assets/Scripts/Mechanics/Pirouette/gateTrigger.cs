@@ -15,6 +15,12 @@ public class gateTrigger : MonoBehaviour
         this.transform.GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = correctButton;
     }
 
+    private void OnEnable()
+    {
+        generateRandomGateLetter();
+        this.transform.GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = correctButton;
+    }
+
     public void checkX(InputAction.CallbackContext context)
     {
         Debug.Log("check");
