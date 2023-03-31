@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class finishTrigger : MonoBehaviour
 {
+    public GameObject canvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class finishTrigger : MonoBehaviour
     {
         if (triggerer.tag == "Player")
             Debug.Log("You won!");
+        canvas.SetActive(false);
 
 
     }
