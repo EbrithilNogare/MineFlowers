@@ -46,7 +46,7 @@ Material:
     - _Blur: 39.28
     - _ContrastValue: 1.64
     - _DarkenMultilply: 0.2
-    - _Distance: 47.86
+    - _Distance: 20
     - _NoiseScale: 0.66
     - _QueueControl: 0
     - _QueueOffset: 0
