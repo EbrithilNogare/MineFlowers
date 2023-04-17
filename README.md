@@ -6,3 +6,4 @@ Unity Game
 
 ### Online DEMO
 [Mine Flowers](https://ebrithilnogare.github.io/MineFlowers/)
+![](https://img.shields.io/github/actions/workflow/status/EbrithilNogare/MineFlowers/main.yml)
