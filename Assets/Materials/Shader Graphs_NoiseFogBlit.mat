@@ -54,7 +54,7 @@ Material:
     - _noiseStrength: 0.95
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
-    - _FogCenter: {r: 0.20164049, g: 1.3612092, b: -3.99996, a: 0}
+    - _FogCenter: {r: 20.754654, g: 12.530556, b: -226.02386, a: 0}
     - _NoiseSpeed: {r: 1.34, g: 0.49, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5431547733806440749
