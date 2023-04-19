@@ -25,6 +25,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d06d5a5d905948ecb1c307baba39e773_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 6246a2016ae128d4ba3ac4fe96258afa, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_f36731977f0c4d9c9787cdb6cfd8ec03_Texture_1:
         m_Texture: {fileID: 2800000, guid: 6246a2016ae128d4ba3ac4fe96258afa, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -46,16 +50,17 @@ Material:
     - _Blur: 39.28
     - _ContrastValue: 1.64
     - _DarkenMultilply: 0.2
-    - _Distance: 47.86
-    - _NoiseScale: 0.66
+    - _Distance: 13.7
+    - _NoiseScale: -0.09
+    - _NoiseScale_1: 0.59
     - _QueueControl: 0
     - _QueueOffset: 0
     - _noiseScale2: 0.04
-    - _noiseStrength: 0.95
+    - _noiseStrength: 1.46
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
     - _FogCenter: {r: 0.20000005, g: 1.375, b: -4, a: 0}
-    - _NoiseSpeed: {r: 1.34, g: 0.49, b: 0, a: 0}
+    - _NoiseSpeed: {r: 0.05, g: 0.44, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5431547733806440749
 MonoBehaviour:
