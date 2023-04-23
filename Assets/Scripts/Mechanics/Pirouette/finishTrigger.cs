@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,6 +8,7 @@ public class finishTrigger : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject playerHuman;
+    public GameObject imaginationController;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,7 @@ public class finishTrigger : MonoBehaviour
             Debug.Log("You won!");
             canvas.SetActive(false);
             playerHuman.transform.GetComponent<PlayerInput>().enabled = true;
+            imaginationController.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationController.GetComponent<RealityAwareness>().awareness + 0.3f, 0, 1);
         }
 
 
