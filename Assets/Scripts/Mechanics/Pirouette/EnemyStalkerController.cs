@@ -1,4 +1,5 @@
 using System.Numerics;
+using Unity.Mathematics;
 using UnityEngine;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
@@ -10,6 +11,7 @@ public class EnemyStalkerController : MonoBehaviour
     public GameObject canvas;
     public GameObject gates;
     public GameObject player;
+    public GameObject imaginationController;
 
 
     private Vector3 localStartPosition;
@@ -50,6 +52,7 @@ public class EnemyStalkerController : MonoBehaviour
 
     public void ResetGame()
     {
+        imaginationController.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationController.GetComponent<RealityAwareness>().awareness * 0.9f, 0, 1);
         transform.localPosition = localStartPosition;
         player.transform.localPosition = resetStartPositionPlayer;
         duration *= 1.1f;
