@@ -35,6 +35,8 @@ public class BallInSpiralController : MonoBehaviour
     private void FixedUpdate()
     {
         sphereRigidBody.velocity = moveVector * speed;
+
+
     }
     public void Move(InputAction.CallbackContext context)
     {
