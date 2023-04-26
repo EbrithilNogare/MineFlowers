@@ -10,9 +10,6 @@ public class spiralMinigameHandler : MonoBehaviour
     public GameObject gates;
     public GameObject finish;
 
-    public float enemyDistanceToFin;
-    public float playerDistanceToFin;
-    public float distanceDifference;
     public float spinSpeed;
 
     private Vector3 resetStartPositionPlayer;
@@ -27,15 +24,16 @@ public class spiralMinigameHandler : MonoBehaviour
 
     private void Update()
     {
-        enemyDistanceToFin = Vector3.Distance(enemyBall.transform.position, finish.transform.position);
-        playerDistanceToFin = Vector3.Distance(playerBall.transform.position, finish.transform.position);
-        distanceDifference = enemyDistanceToFin - playerDistanceToFin;
-        spinSpeed = Mathf.Lerp(0.3f, 2f, distanceDifference / 150);
+        float enemyDistanceToFin = Vector3.Distance(enemyBall.transform.position, finish.transform.position);
+        float playerDistanceToFin = Vector3.Distance(playerBall.transform.position, finish.transform.position);
+        float distanceDifference = enemyDistanceToFin - playerDistanceToFin;
+        float wholeDifference = Vector3.Distance(resetStartPositionEnemy, finish.transform.position);
+        Debug.Log("wholeDifference: " + wholeDifference);
+        spinSpeed = Mathf.Lerp(0.3f, 2f, distanceDifference / wholeDifference);
     }
 
     private void OnEnable()
     {
-        Debug.Log("Enable!!!");
         minigameOn = true;
         for (int i = 0; i < gates.transform.childCount; i++)
         {
