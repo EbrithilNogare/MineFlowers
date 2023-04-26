@@ -3,7 +3,12 @@ guid: de83ede43865e434281f7844f167cd82
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bunker_1
+    second: {fileID: 2100000, guid: 12a2df588ca500443a00f67e1c628021, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
