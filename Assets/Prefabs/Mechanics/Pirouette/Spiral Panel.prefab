@@ -1491,9 +1491,6 @@ MonoBehaviour:
   enemyBall: {fileID: 3518286869300982897}
   gates: {fileID: 3518286869364517416}
   finish: {fileID: 3518286869404032931}
-  enemyDistanceToFin: 0
-  playerDistanceToFin: 0
-  distanceDifference: 0
   spinSpeed: 0
   minigameOn: 0
 --- !u!1 &3518286868830403108
