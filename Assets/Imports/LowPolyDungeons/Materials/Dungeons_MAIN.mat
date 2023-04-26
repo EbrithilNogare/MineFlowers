@@ -15,7 +15,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
+  m_CustomRenderQueue: 2450
   stringTagMap: {}
   disabledShaderPasses:
   - DistortionVectors
@@ -248,9 +248,9 @@ Material:
     - _IsFarAway: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
-    - _Max_Distance: 11.33899
+    - _Max_Distance: 7.5624
     - _Metallic: 0
-    - _Min_Distance: 10.33899
+    - _Min_Distance: 6.5624
     - _Mode: 1
     - _NormalMapSpace: 0
     - _NormalScale: 1
