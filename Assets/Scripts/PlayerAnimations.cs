@@ -21,7 +21,6 @@ public class PlayerAnimations : MonoBehaviour
             animator.SetBool("SpiralMinigameOn", true);
             animator.SetFloat("SpinSpeed", minigame.spinSpeed);
         }
-
         else
         {
             animator.SetBool("SpiralMinigameOn", false);
