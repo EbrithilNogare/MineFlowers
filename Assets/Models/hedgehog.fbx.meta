@@ -3,7 +3,12 @@ guid: b3c7c3bc14fbfaa4cb8e1539e44c64eb
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MetalCorrodedHeavy001_1K.001
+    second: {fileID: 2100000, guid: a788fc0054f125046846dbe7f8e11a07, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
