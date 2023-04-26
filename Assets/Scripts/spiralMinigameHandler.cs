@@ -30,7 +30,7 @@ public class spiralMinigameHandler : MonoBehaviour
         enemyDistanceToFin = Vector3.Distance(enemyBall.transform.position, finish.transform.position);
         playerDistanceToFin = Vector3.Distance(playerBall.transform.position, finish.transform.position);
         distanceDifference = enemyDistanceToFin - playerDistanceToFin;
-        spinSpeed = Mathf.Lerp(0.1f, 3f, distanceDifference / 150);
+        spinSpeed = Mathf.Lerp(0.3f, 2f, distanceDifference / 150);
     }
 
     private void OnEnable()
@@ -48,7 +48,6 @@ public class spiralMinigameHandler : MonoBehaviour
         enemyBall.transform.localPosition = resetStartPositionEnemy;
         enemyBall.transform.GetComponent<EnemyStalkerController>().duration = 20;
         playerBall.transform.localPosition = resetStartPositionPlayer;
-        minigameOn = false;
     }
 
 }
