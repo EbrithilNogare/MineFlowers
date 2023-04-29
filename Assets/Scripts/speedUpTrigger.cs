@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class speedUpTrigger : MonoBehaviour
 {
+    public float newSpeed = 10f;
+
     public GameObject playerArmature;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,6 @@ public class speedUpTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        playerArmature.GetComponent<ThirdPersonController>().SprintSpeed = 50f;
+        playerArmature.GetComponent<ThirdPersonController>().SprintSpeed = newSpeed;
     }
 }
