@@ -248,9 +248,9 @@ Material:
     - _IsFarAway: 1
     - _LinkDetailsWithBase: 1
     - _MaterialID: 1
-    - _Max_Distance: 13
+    - _Max_Distance: 15.5
     - _Metallic: 0
-    - _Min_Distance: 12
+    - _Min_Distance: 14.5
     - _Mode: 1
     - _NormalMapSpace: 0
     - _NormalScale: 1
