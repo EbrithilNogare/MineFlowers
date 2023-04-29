@@ -71,3 +71,5 @@ Thumbs.db.meta
 # Large imports
 [Aa]ssets/LargeImports*
 
+/.vs/
+/.idea/
