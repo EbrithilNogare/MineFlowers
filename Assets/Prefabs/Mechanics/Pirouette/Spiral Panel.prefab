@@ -1280,6 +1280,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 587c0945-ea33-444d-97b1-ec8c37d28669
     m_ActionName: Spiral/New action
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 58fde021-7f36-4bcd-bef2-3a1d3eb903de
+    m_ActionName: UI/Enter[/Keyboard/enter]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Spiral
@@ -1486,6 +1490,9 @@ MonoBehaviour:
   playerBall: {fileID: 3518286868311138113}
   enemyBall: {fileID: 3518286869300982897}
   gates: {fileID: 3518286869364517416}
+  finish: {fileID: 3518286869404032931}
+  spinSpeed: 0
+  minigameOn: 0
 --- !u!1 &3518286868830403108
 GameObject:
   m_ObjectHideFlags: 0
@@ -1873,6 +1880,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   gates: {fileID: 3518286869364517416}
   player: {fileID: 3518286868311138113}
+  imaginationController: {fileID: 0}
 --- !u!58 &3518286869300982895
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2136,6 +2144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 3518286868477721438}
   playerHuman: {fileID: 0}
+  imaginationController: {fileID: 0}
+  minigame: {fileID: 8900898134009663720}
 --- !u!114 &3518286869404032850
 MonoBehaviour:
   m_ObjectHideFlags: 0
