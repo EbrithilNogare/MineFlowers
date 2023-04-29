@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Teleporter : MonoBehaviour
 {
-    public Vector3 position;
-
     public GameObject thePlayer;
     public GameObject warpTarget;
 
