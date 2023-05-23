@@ -530,6 +530,94 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Hands",
+            "id": "6bc74ef4-0c2e-47b1-b9d7-e8fb20beca00",
+            "actions": [
+                {
+                    "name": "Right hand up",
+                    "type": "Button",
+                    "id": "39f276fb-02df-4e4c-b50e-f216be55f374",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Right hand down",
+                    "type": "Button",
+                    "id": "a301aefa-6a44-4584-b288-c7117fde143d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left hand up",
+                    "type": "Button",
+                    "id": "e6c94695-3970-4ffc-9e25-b46d5c27c18c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Left hand down",
+                    "type": "Button",
+                    "id": "bf921a91-b5eb-472d-a06b-f8e95e55a625",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c9b38650-8440-402a-a534-9e1e1d5f496b",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right hand up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bc17a013-9cb8-4f61-b152-c771d2aad9f8",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Right hand down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "78d7dcba-1278-4cee-a31e-9aa28ac664a1",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left hand up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5cbf643d-9041-423f-b667-771360cd158f",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Left hand down",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
