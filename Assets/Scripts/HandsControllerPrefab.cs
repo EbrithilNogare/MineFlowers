@@ -13,9 +13,13 @@ public class HandsControllerPrefab : MonoBehaviour
     public GameObject rHandTarget;
     public GameObject lHandTarget;
     public GameObject HandsIKRig;
-    
+    public GameObject rHandBone;
+    public GameObject lHandBone;
+    public bool HandContorllerEnabled;
+
     private void Start()
     {
+        HandContorllerEnabled = false;
         controls = new HandsController2();
         var rig = HandsIKRig.GetComponent<Rig>();
         rig.weight = 0;
@@ -25,7 +29,20 @@ public class HandsControllerPrefab : MonoBehaviour
         controls.Hands.Lefthanddown.performed += context => MoveLeftTargetDown();
     }
     
-    
+    void Update()
+    {
+
+        if (HandContorllerEnabled)
+        {
+            var rig = HandsIKRig.GetComponent<Rig>();
+            rig.weight = Mathf.MoveTowards(rig.weight, 0.5f, 0.7f * Time.deltaTime);
+        }
+        else if (!HandContorllerEnabled)
+        {
+            var rig = HandsIKRig.GetComponent<Rig>();
+            rig.weight = Mathf.MoveTowards(rig.weight, 0, 0.7f * Time.deltaTime);
+        }
+    }
     private void OnEnable()
     {
         controls?.Enable();
@@ -40,8 +57,8 @@ public class HandsControllerPrefab : MonoBehaviour
     {
         Debug.Log("enabled");
         controls.Enable();
-        var rig = HandsIKRig.GetComponent<Rig>();
-        rig.weight = 1;
+        HandContorllerEnabled = true;
+        
     }
     
     public void DisableControls()
@@ -49,7 +66,8 @@ public class HandsControllerPrefab : MonoBehaviour
         Debug.Log("disabled");
         controls.Disable();
         var rig = HandsIKRig.GetComponent<Rig>();
-        rig.weight = 0;
+        HandContorllerEnabled = false;
+       // rig.weight = 0;
     }
     
     void MoveRightTargetUp()
