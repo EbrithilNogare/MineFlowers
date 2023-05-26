@@ -38,19 +38,18 @@ public class TriggerMiddle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        playerNearbyLeft = true;
-        playerNearbyRight = true;
+        ResetPositions();
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        ResetPositions();
-        if (oneRoundCount == 2)
-            winCount++;
-        if (winCount == numOfRounds)
-            Canvas.SetActive(false);
-        oneRoundCount = 0;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    ResetPositions();
+    //    if (oneRoundCount == 2)
+    //        winCount++;
+    //    if (winCount == numOfRounds)
+    //        Canvas.SetActive(false);
+    //    oneRoundCount = 0;
+    //}
 
     public void ResetPositions()
     {
@@ -60,50 +59,50 @@ public class TriggerMiddle : MonoBehaviour
         GenerateParent.GetComponent<GenerateArrows>().generateArrows(Right);
     }
 
-    public void checkLU(InputAction.CallbackContext context)
-    {
-        //Debug.Log("check");
-        if (playerNearbyLeft && Left.transform.localEulerAngles.z == 180)
-        {
-            Debug.Log("YES_LEFT");
-            playerNearbyLeft = false;
-            oneRoundCount++;
-        }
+    //public void checkLU(InputAction.CallbackContext context)
+    //{
+    //    //Debug.Log("check");
+    //    if (playerNearbyLeft && Left.transform.localEulerAngles.z == 180)
+    //    {
+    //        Debug.Log("YES_LEFT");
+    //        playerNearbyLeft = false;
+    //        oneRoundCount++;
+    //    }
 
-    }
-    public void checkRU(InputAction.CallbackContext context)
-    {
-        //Debug.Log("check");
-        if (playerNearbyRight && Right.transform.eulerAngles.z == 180)
-        {
-            Debug.Log("YES_RIGHT");
-            oneRoundCount++;
-            playerNearbyRight = false;
+    //}
+    //public void checkRU(InputAction.CallbackContext context)
+    //{
+    //    //Debug.Log("check");
+    //    if (playerNearbyRight && Right.transform.eulerAngles.z == 180)
+    //    {
+    //        Debug.Log("YES_RIGHT");
+    //        oneRoundCount++;
+    //        playerNearbyRight = false;
 
-        }
+    //    }
 
-    }
-    public void checkLD(InputAction.CallbackContext context)
-    {
-        //Debug.Log("check");
-        if (playerNearbyLeft && Left.transform.eulerAngles.z == 0)
-        {
-            Debug.Log("YES_LEFT");
-            oneRoundCount++;
-            playerNearbyLeft = false;
+    //}
+    //public void checkLD(InputAction.CallbackContext context)
+    //{
+    //    //Debug.Log("check");
+    //    if (playerNearbyLeft && Left.transform.eulerAngles.z == 0)
+    //    {
+    //        Debug.Log("YES_LEFT");
+    //        oneRoundCount++;
+    //        playerNearbyLeft = false;
 
-        }
-    }
+    //    }
+    //}
 
-    public void checkRD(InputAction.CallbackContext context)
-    {
-        //Debug.Log("check");
-        if (playerNearbyRight && Right.transform.eulerAngles.z == 0)
-        {
-            Debug.Log("YES_RIGHT");
-            oneRoundCount++;
-            playerNearbyRight = false;
+    //public void checkRD(InputAction.CallbackContext context)
+    //{
+    //    //Debug.Log("check");
+    //    if (playerNearbyRight && Right.transform.eulerAngles.z == 0)
+    //    {
+    //        Debug.Log("YES_RIGHT");
+    //        oneRoundCount++;
+    //        playerNearbyRight = false;
 
-        }
-    }
+    //    }
+    //}
 }
