@@ -1,6 +1,8 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Checker : MonoBehaviour
@@ -8,6 +10,34 @@ public class Checker : MonoBehaviour
     public GameObject Left;
     public GameObject Right;
     public GameObject Canvas;
+
+    #region [SerializeField] public GameObject StartGamePosition { get; }
+
+    [SerializeField]
+    [Tooltip("TODO")]
+    private GameObject _StartGamePosition;
+
+    /// <summary>
+    /// TODO
+    /// </summary>
+    public GameObject StartGamePosition => _StartGamePosition;
+
+    #endregion
+
+
+    #region [SerializeField] public GameObject Player { get; }
+
+    [SerializeField]
+    [Tooltip("TODO")]
+    private GameObject _Player;
+
+    /// <summary>
+    /// TODO
+    /// </summary>
+    public GameObject Player => _Player;
+
+    #endregion
+
 
     public int COUNT;
 
@@ -19,19 +49,23 @@ public class Checker : MonoBehaviour
     private bool leftDone = false;
     private bool rightDone = false;
 
-    private int winCount = 0;
+    private int winCount = 5;
     private int oneRoundCount = 0;
 
     private const int numOfRounds = 5;
+    MovePlayer move;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        move = _StartGamePosition.GetComponent<MovePlayer>();
         playerNearbyLeft = true;
         playerNearbyRight = true;
         if (oneRoundCount >= 2)
+        {
             winCount++;
-        if (winCount == numOfRounds)
-            Canvas.SetActive(false);
+            move.currentSegment++;
+            move.state = MovePlayer.State.moving;
+        }
         oneRoundCount = 0;
     }
     private void OnTriggerExit2D(Collider2D collision)
