@@ -15,7 +15,7 @@ Material:
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -101,9 +101,9 @@ Material:
     - _GlossyReflections: 1
     - _Glowing_edge_size: 0.02
     - _IsFarAway: 0
-    - _Max_Distance: 20
+    - _Max_Distance: 10.550002
     - _Metallic: 0
-    - _Min_Distance: 19
+    - _Min_Distance: 9.550002
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
