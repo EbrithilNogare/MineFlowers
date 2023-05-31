@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RealityAwareness : MonoBehaviour
 {
+    private AudioSource audioSource;
+
     [Range(0.0f, 1.0f)]
     public float awareness = .5f;
     
@@ -16,10 +18,18 @@ public class RealityAwareness : MonoBehaviour
     public float maxGlidDistance = 30f;
     public Material postProecssmaterial;
 
+    public AudioClip goodAudioClip;
+    public AudioClip badAudioClip;
+
+    // 0 = not playing
+    // 1 = good effect playing
+    // 2 = bad effect playing
+    private int playing = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -37,7 +47,25 @@ public class RealityAwareness : MonoBehaviour
     void AlterAwareness(float diff)
     {
         awareness = Mathf.Clamp(awareness + diff, 0f, 1f);
+    }
 
+    public void SetAudioRequest(bool goodEffect)
+    {
+        if((playing == 0 || playing == 2) && goodEffect)
+        {
+            audioSource.clip = goodAudioClip;
+            audioSource.Play();
+        }
+        else if ((playing == 0 || playing == 1) && !goodEffect)
+        {
+            audioSource.clip = badAudioClip;
+            audioSource.Play();
+        }
+    }
+
+    public void UnSetAudioRequest()
+    {
+        audioSource.Stop();
     }
 
 }
