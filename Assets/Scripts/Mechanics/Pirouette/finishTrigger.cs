@@ -33,5 +33,8 @@ public class finishTrigger : MonoBehaviour
             playerHuman.transform.GetComponent<PlayerInput>().enabled = true;
             imaginationController.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationController.GetComponent<RealityAwareness>().awareness + 0.3f, 0, 1);
         }
+
+
+
     }
 }

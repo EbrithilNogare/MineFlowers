@@ -45,7 +45,7 @@ Material:
     m_Floats:
     - _Blur: 39.28
     - _ContrastValue: 1.5
-    - _DarkenMultilply: 0.4
+    - _DarkenMultilply: 0.5
     - _Distance: 17.5
     - _NoiseScale: 0.66
     - _QueueControl: 0
@@ -55,7 +55,7 @@ Material:
     - _noiseStrength: 0.95
     m_Colors:
     - _BaseColor: {r: 0, g: 0, b: 0, a: 0}
-    - _FogCenter: {r: 24.45885, g: 6.1834965, b: 25.364532, a: 0}
+    - _FogCenter: {r: 64.324875, g: 13.143021, b: -19.112541, a: 0}
     - _NoiseSpeed: {r: 1.34, g: 0.49, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &5431547733806440749

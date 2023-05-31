@@ -758,8 +758,6 @@ MonoBehaviour:
   Left: {fileID: 9085305945467308975}
   Right: {fileID: 9085305947179260055}
   Canvas: {fileID: 9085305947200555382}
-  _StartGamePosition: {fileID: 0}
-  _Player: {fileID: 0}
   COUNT: 0
 --- !u!1 &9085305947073519998
 GameObject:
@@ -1006,7 +1004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9085305947200555378
 RectTransform:
   m_ObjectHideFlags: 0
