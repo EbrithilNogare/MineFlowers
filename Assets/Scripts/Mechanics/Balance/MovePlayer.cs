@@ -106,7 +106,6 @@ public class MovePlayer : MonoBehaviour
                 // end minigame
                 RestartInputs(false);
                 Restart();
-                gameObject.GetComponent<CapsuleCollider>().enabled = false;
             }
             else if (progress * numberOfSegments > currentSegment)
             {
