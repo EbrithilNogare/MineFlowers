@@ -26,4 +26,9 @@ public class Minigame : MonoBehaviour
         Player.transform.GetComponent<PlayerInput>().enabled = false;
         minigamePanel.SetActive(true);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        gameObject.SetActive(false);
+    }
 }
