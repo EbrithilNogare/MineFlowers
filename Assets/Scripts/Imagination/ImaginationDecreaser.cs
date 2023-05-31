@@ -20,11 +20,18 @@ public class ImaginationDecreaser : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        imaginationLevel.GetComponent<RealityAwareness>().SetAudioRequest(false);
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("imagination decrease");
-        //if (imaginationLevel.GetComponent<RealityAwareness>().awareness > imaginationLevel.GetComponent<RealityAwareness>().minGlidDistance)
         imaginationLevel.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationLevel.GetComponent<RealityAwareness>().awareness - 0.005f, 0, 1);
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        imaginationLevel.GetComponent<RealityAwareness>().UnSetAudioRequest();
     }
 }
