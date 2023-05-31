@@ -1,6 +1,7 @@
 using System.Numerics;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.Events;
 using Vector2 = UnityEngine.Vector2;
 using Vector3 = UnityEngine.Vector3;
 
@@ -13,6 +14,18 @@ public class EnemyStalkerController : MonoBehaviour
     public GameObject player;
     public GameObject imaginationController;
 
+    #region [SerializeField] public AudioSource LooseImagination { get; }
+
+    [SerializeField]
+    [Tooltip("TODO")]
+    private AudioSource _LooseImagination;
+
+    /// <summary>
+    /// TODO
+    /// </summary>
+    public AudioSource LooseImagination => _LooseImagination;
+
+    #endregion
 
     private Vector3 localStartPosition;
     private Vector3 globalStartPosition;
@@ -21,7 +34,6 @@ public class EnemyStalkerController : MonoBehaviour
     private float wholeDistance;
     private Vector3 resetStartPositionPlayer;
     private const float turns = 3;
-
 
     void Start()
     {
@@ -53,6 +65,7 @@ public class EnemyStalkerController : MonoBehaviour
     public void ResetGame()
     {
         imaginationController.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationController.GetComponent<RealityAwareness>().awareness * 0.9f, 0, 1);
+        PlaySoundInterval(0, 2f);
         transform.localPosition = localStartPosition;
         player.transform.localPosition = resetStartPositionPlayer;
         duration *= 1.1f;
@@ -63,11 +76,16 @@ public class EnemyStalkerController : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D()
     {
         ResetGame();
 
     }
 
+    void PlaySoundInterval(float fromSeconds, float toSeconds)
+    {
+        LooseImagination.time = fromSeconds;
+        LooseImagination.Play();
+        LooseImagination.SetScheduledEndTime(AudioSettings.dspTime + (toSeconds - fromSeconds));
+    }
 }
