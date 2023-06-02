@@ -44,5 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce284879ee5e8664ab3d407d0efeab27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flowerCanvas: {fileID: 0}
+  flowerCanvasText: {fileID: 0}
   player: {fileID: 0}
