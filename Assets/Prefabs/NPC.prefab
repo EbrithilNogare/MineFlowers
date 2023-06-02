@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1816960629136600009}
   - component: {fileID: 4034683237249290566}
   - component: {fileID: 3248494195714051430}
+  - component: {fileID: 2746620535687679334}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 3248494195714051430}
-  activateNpc: {fileID: 0}
+  activateNpc: {fileID: 1816960629692632150}
 --- !u!95 &3248494195714051430
 Animator:
   serializedVersion: 4
@@ -69,6 +70,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!136 &2746620535687679334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816960629136600010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1 &1816960629692632145
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,7 +309,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Soldier-T-pose@Breathing Idle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5866666021909216657, guid: e2a929ed21d8e5244b6fd2ca8072488a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e2a929ed21d8e5244b6fd2ca8072488a, type: 3}
 --- !u!4 &2555157391038710033 stripped
 Transform:
