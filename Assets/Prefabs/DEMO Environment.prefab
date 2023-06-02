@@ -295,6 +295,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 120446778677924830}
     m_Modifications:
+    - target: {fileID: 6118989914436980901, guid: f6e94f8c7b63894479edc588f0e83378,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6118989914557896801, guid: f6e94f8c7b63894479edc588f0e83378,
         type: 3}
       propertyPath: imaginationLevel
@@ -519,6 +524,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ImaginationIncrease
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001227291288858160, guid: f56a27dc4ca57a9419ec9860a03416f4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f56a27dc4ca57a9419ec9860a03416f4, type: 3}
