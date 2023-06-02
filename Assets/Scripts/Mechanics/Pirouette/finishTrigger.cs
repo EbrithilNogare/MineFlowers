@@ -46,7 +46,7 @@ public class finishTrigger : MonoBehaviour
             minigame.minigameOn = false;
             canvas.SetActive(false);
             playerHuman.transform.GetComponent<PlayerInput>().enabled = true;
-            imaginationController.GetComponent<RealityAwareness>().awareness = math.clamp(imaginationController.GetComponent<RealityAwareness>().awareness + 0.3f, 0, 1);
+            imaginationController.GetComponent<RealityAwareness>().awareness = 1f;
         }
     }
 
