@@ -56,7 +56,7 @@ public class flowerPut : MonoBehaviour
         for (int i = 0; i < numberOfCopies; i++)
         {
             Vector3 spawnPosition = startPosition + direction * spacing * (i + 1);
-            GameObject newObject = Instantiate(objectToCopy, spawnPosition, Quaternion.identity);
+            GameObject newObject = Instantiate(objectToCopy, spawnPosition, objectToCopy.transform.localRotation);
             newObject.SetActive(true);
         }
     }
