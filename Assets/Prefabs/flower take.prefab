@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2798fbc514ee454eba6df26de2649b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flower: {fileID: 0}
+  flower: {fileID: 1978080939227090261}
   flowerController: {fileID: 0}
 --- !u!135 &1978080939227090257
 SphereCollider:
