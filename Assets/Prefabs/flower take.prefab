@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2798fbc514ee454eba6df26de2649b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flower: {fileID: 0}
+  flower: {fileID: 4029744315698719506}
   flowerController: {fileID: 0}
 --- !u!135 &1978080939227090257
 SphereCollider:
@@ -145,6 +145,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 261312a561e0c0846b4ed93cc4dfe381, type: 3}
+--- !u!1 &4029744315698719506 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 261312a561e0c0846b4ed93cc4dfe381,
+    type: 3}
+  m_PrefabInstance: {fileID: 4264326978587465283}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4370558403965055400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 261312a561e0c0846b4ed93cc4dfe381,
