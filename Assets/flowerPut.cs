@@ -7,6 +7,7 @@ public class flowerPut : MonoBehaviour
 {
     public GameObject startObject;
     public GameObject endObject;
+    public GameObject widthObject;
     public GameObject objectToCopy;
     public GameObject flowerController;
 
@@ -47,6 +48,7 @@ public class flowerPut : MonoBehaviour
     private void CopyObjectsAlongLine(int numberOfCopies)
     {
         Vector3 startPosition = startObject.transform.position;
+        Vector3 widthPosition = widthObject.transform.position;
         Vector3 endPosition = endObject.transform.position;
         Vector3 direction = (endPosition - startPosition).normalized;
 
@@ -55,9 +57,18 @@ public class flowerPut : MonoBehaviour
 
         for (int i = 0; i < numberOfCopies; i++)
         {
-            Vector3 spawnPosition = startPosition + direction * spacing * (i + 1);
-            GameObject newObject = Instantiate(objectToCopy, spawnPosition, objectToCopy.transform.localRotation);
-            newObject.SetActive(true);
+            float r1 = UnityEngine.Random.Range(0f, 1f);
+            float r2 = UnityEngine.Random.Range(0f, 1f);
+            if (r1 + r2 >= 1f)
+            {
+                r1 = 1f - r1;
+                r2 = 1f - r2;
+            }
+            float r3 = 1f - r1 - r2;
+
+            Vector3 position = r1 * startPosition + r2 * widthPosition + r3 * endPosition;
+
+            GameObject newObject = Instantiate(objectToCopy, position, objectToCopy.transform.localRotation);
         }
     }
 
