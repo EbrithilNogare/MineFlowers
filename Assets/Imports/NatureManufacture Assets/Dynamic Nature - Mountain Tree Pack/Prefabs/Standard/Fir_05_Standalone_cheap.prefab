@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4975862715486574
 Transform:
@@ -55,19 +55,15 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7974733304042939568}
-  - screenRelativeHeight: 0.999
+  - screenRelativeHeight: 0.80992657
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7974733304042939574}
-  - screenRelativeHeight: 0.85
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 7974733304042939572}
-  - screenRelativeHeight: 0.26
+  - screenRelativeHeight: 0.5974336
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 7974733304042939578}
-  - screenRelativeHeight: 0.025
+  - screenRelativeHeight: 0.1994213
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 1532193801719635402}
@@ -88,7 +84,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6022715043509997743
 Transform:
@@ -171,7 +167,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7974733304040646228
 Transform:
@@ -256,7 +252,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7974733304040646230
 Transform:
@@ -354,7 +350,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7974733304040646232
 Transform:
@@ -438,7 +434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &7974733304040646234
 Transform:
