@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4585630187838670
 Transform:
@@ -55,19 +55,15 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8426258975968884676}
-  - screenRelativeHeight: 0.999
-    fadeTransitionWidth: 0
-    renderers:
-    - renderer: {fileID: 8426258975968884674}
-  - screenRelativeHeight: 0.737
+  - screenRelativeHeight: 0.84111315
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8426258975968884672}
-  - screenRelativeHeight: 0.215
+  - screenRelativeHeight: 0.6000903
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 8426258975968884686}
-  - screenRelativeHeight: 0.025
+  - screenRelativeHeight: 0.22474723
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 4406457640047254330}
@@ -88,7 +84,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &3111033067133465690
 Transform:
@@ -171,7 +167,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8426258975971308832
 Transform:
@@ -256,7 +252,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8426258975971308834
 Transform:
@@ -354,7 +350,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8426258975971308844
 Transform:
@@ -438,7 +434,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 80
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8426258975971308846
 Transform:
