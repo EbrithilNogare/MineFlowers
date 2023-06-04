@@ -11,6 +11,7 @@ public class fpsCounter : MonoBehaviour
     private float timingSum = 0;
 
     public GameObject canvasText;
+    public string keyToControl;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,11 @@ public class fpsCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(keyToControl))
+        {
+            canvasText.SetActive(!canvasText.activeSelf);
+        }
+
         timingSum -= timings[timingsIndex];
         timings[timingsIndex] = Time.deltaTime;
         timingSum += timings[timingsIndex];
