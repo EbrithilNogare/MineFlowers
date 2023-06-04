@@ -7,6 +7,7 @@ public class flowerTake : MonoBehaviour
 
     public GameObject flower;
     public GameObject flowerController;
+    public float awarenessIncrement = 0.2f;
 
     private float ineerTimer = 0;
     private bool ineerTimerRunning = false;
@@ -41,5 +42,8 @@ public class flowerTake : MonoBehaviour
     {
         ineerTimerRunning = true;
         flowerController.GetComponent<FlowerCounter>().player.GetComponent<Animator>().SetBool("PickingFromGround", true);
+        var awarenesComponent = flowerController.GetComponent<FlowerCounter>().realityAwereness.GetComponent<RealityAwareness>();
+        awarenesComponent.awareness = Mathf.Clamp(awarenesComponent.awareness + awarenessIncrement,0,1);
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }

@@ -8,6 +8,7 @@ public class FlowerCounter : MonoBehaviour
 
     public GameObject flowerCanvasText;
     public GameObject player;
+    public GameObject realityAwereness;
 
     // Start is called before the first frame update
     void Start()
