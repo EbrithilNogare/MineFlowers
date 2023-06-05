@@ -100,9 +100,9 @@ Material:
     - _GlossyReflections: 0
     - _Glowing_edge_size: 0.02
     - _IsFarAway: 1
-    - _Max_Distance: 20
+    - _Max_Distance: 15.8
     - _Metallic: 0
-    - _Min_Distance: 19
+    - _Min_Distance: 14.8
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
