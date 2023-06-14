@@ -69,8 +69,13 @@ public class BalanceController : MonoBehaviour
         // make move
         if (playing)
         {
+            Vector3 actualPosition = player.transform.position;
+            Vector3 finalPosition = Vector3.Lerp(startPosition.transform.position, endPosition.transform.position, currentIteration);
+            float maxDistance = playerSpeed * Time.deltaTime;
             player.transform.position =
-            Vector3.MoveTowards(player.transform.position, Vector3.Lerp(startPosition.transform.position, endPosition.transform.position, currentIteration), playerSpeed * Time.deltaTime); // TODO better speed
+            Vector3.MoveTowards(actualPosition, finalPosition, maxDistance);
+            player.GetComponent<Animator>().SetFloat("Speed", Vector3.Distance(actualPosition, finalPosition) > .001f ? 2 * playerSpeed : 0);
+
 
             arrowsProgress += Time.deltaTime / duration;
             leftPart.transform.position = Vector3.Lerp(leftStart.transform.position, leftFinish.transform.position, arrowsProgress);
@@ -158,6 +163,10 @@ public class BalanceController : MonoBehaviour
         {
             player.GetComponent<PlayerInput>().enabled = false;
             gameObject.GetComponent<PlayerInput>().enabled = true;
+            player.GetComponent<Animator>().SetFloat("Speed", 0);
+            player.GetComponent<Animator>().SetBool("Jump", false);
+            player.GetComponent<Animator>().SetBool("Grounded", true);
+            player.GetComponent<Animator>().SetBool("FreeFall", false);
         }
         else
         {
