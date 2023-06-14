@@ -12,7 +12,6 @@ public class BalanceConnector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("HERE");
         balanceController.SetActive(true);
         balanceController.GetComponent<BalanceController>().initNewMinigame(startPosition, endPosition);
     }

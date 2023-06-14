@@ -41,7 +41,6 @@ public class finishTrigger : MonoBehaviour
     {
         if (triggerer.tag == "Player")
         {
-            Debug.Log("You won!");
             PlaySoundInterval(0, 3f);
             minigame.minigameOn = false;
             canvas.SetActive(false);
