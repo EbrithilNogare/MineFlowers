@@ -15,7 +15,7 @@ public class BrotherNPCController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
+        gameObject.GetComponent<SphereCollider>().enabled = false;
         int count = 0;
         int.TryParse(FlowersController.GetComponent<FlowerCounter>().flowerCanvasText.GetComponent<TMP_Text>().text, out count);
 
@@ -23,7 +23,7 @@ public class BrotherNPCController : MonoBehaviour
             gameObject.GetComponent<AudioSource>().clip = GoodEndingAudio;
         else
             gameObject.GetComponent<AudioSource>().clip = BadEndingAudio;
-        
-        gameObject.GetComponent<AudioSource>().Play(); 
+
+        gameObject.GetComponent<AudioSource>().Play();
     }
 }
