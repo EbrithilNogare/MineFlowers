@@ -6,8 +6,21 @@ public class RealityAwareness : MonoBehaviour
 {
     private AudioSource audioSource;
 
+    public GameObject backgroundAudioObject;
+    private AudioSource backgroundAudio;
+
     [Range(0.0f, 1.0f)]
-    public float awareness = .5f;
+    public float _awareness;
+    public float awareness
+    {
+        get => _awareness;
+        set
+        {
+            _awareness = Mathf.Clamp(value, 0f, 1f);
+            backgroundAudio.volume = Mathf.Lerp(0.001f, 0.08f, _awareness);
+        }
+    }
+
     
     public float minDistance = 10f;
     public float maxDistance = 20f;
@@ -30,6 +43,7 @@ public class RealityAwareness : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        backgroundAudio = backgroundAudioObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -42,11 +56,6 @@ public class RealityAwareness : MonoBehaviour
         }
 
         postProecssmaterial.SetFloat("_Distance", Mathf.Lerp(minGlidDistance, maxGlidDistance, awareness));
-    }
-
-    void AlterAwareness(float diff)
-    {
-        awareness = Mathf.Clamp(awareness + diff, 0f, 1f);
     }
 
     public void SetAudioRequest(bool goodEffect)
