@@ -22,7 +22,6 @@ public class Minigame : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("minigame enter");
         Player.transform.GetComponent<PlayerInput>().enabled = false;
         minigamePanel.SetActive(true);
     }

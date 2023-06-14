@@ -102,11 +102,9 @@ public class BalanceController : MonoBehaviour
 
     void onMinigameSuccess()
     {
-        Debug.Log("onMinigameSuccess ");
         currentIteration += 1f / ((float)iterationsCount);
         if (currentIteration >= 1)
         {
-            Debug.Log("onMinigameWin");
 
             startPosition.GetComponent<CapsuleCollider>().enabled = false;
             gameObject.SetActive(false);
@@ -115,7 +113,6 @@ public class BalanceController : MonoBehaviour
 
     void onMinigameError()
     {
-        Debug.Log("onMinigameError");
     }
 
 

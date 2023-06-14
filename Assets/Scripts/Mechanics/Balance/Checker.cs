@@ -77,10 +77,8 @@ public class Checker : MonoBehaviour
 
     public void checkLU(InputAction.CallbackContext context)
     {
-        //Debug.Log("check");
         if (playerNearbyLeft && Left.transform.localEulerAngles.z == 180)
         {
-            Debug.Log("YES_LEFT");
             playerNearbyLeft = false;
             leftDone = true;
             oneRoundCount++;
@@ -89,10 +87,8 @@ public class Checker : MonoBehaviour
     }
     public void checkRU(InputAction.CallbackContext context)
     {
-        //Debug.Log("check");
         if (playerNearbyRight && Right.transform.eulerAngles.z == 180)
         {
-            Debug.Log("YES_RIGHT");
             oneRoundCount++;
             playerNearbyRight = false;
             leftDone = true;
@@ -102,10 +98,8 @@ public class Checker : MonoBehaviour
     }
     public void checkLD(InputAction.CallbackContext context)
     {
-        //Debug.Log("check");
         if (playerNearbyLeft && Left.transform.eulerAngles.z == 0)
         {
-            Debug.Log("YES_LEFT");
             oneRoundCount++;
             playerNearbyLeft = false;
 
@@ -114,10 +108,8 @@ public class Checker : MonoBehaviour
 
     public void checkRD(InputAction.CallbackContext context)
     {
-        //Debug.Log("check");
         if (playerNearbyRight && Right.transform.eulerAngles.z == 0)
         {
-            Debug.Log("YES_RIGHT");
             oneRoundCount++;
             playerNearbyRight = false;
             rightDone = true;

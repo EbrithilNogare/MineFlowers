@@ -21,7 +21,6 @@ public class gateClear : MonoBehaviour
     {
         // if (par.tag == "Player")
         //{
-        Debug.Log("in");
         clear = true;
         //player.position = new Vector3(x, y, 0.0f);
         //}
@@ -29,7 +28,6 @@ public class gateClear : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("out");
         clear = false;
     }
 
