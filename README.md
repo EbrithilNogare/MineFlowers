@@ -6,13 +6,13 @@
 [![](https://img.shields.io/github/size/EbrithilNogare/MineFlowers/Build/WebGL.wasm?branch=gh-pages&style=for-the-badge&label=Size%20of%20scripts&cacheSeconds=300)](https://github.com/EbrithilNogare/MineFlowers/tree/gh-pages/Build)
 [![](https://img.shields.io/github/size/EbrithilNogare/MineFlowers/Build/WebGL.data?branch=gh-pages&style=for-the-badge&label=Size%20of%20data&cacheSeconds=300)](https://github.com/EbrithilNogare/MineFlowers/tree/gh-pages/Build)
 
+## Online DEMO
 
-# MineFlowers
+[Mine Flowers](https://ebrithilnogare.github.io/MineFlowers/)
+
+## MineFlowers
 Unity Game
 
 ### Unity version
 2021.3.6f1
 
-### Online DEMO
-
-[Mine Flowers](https://ebrithilnogare.github.io/MineFlowers/)
