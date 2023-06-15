@@ -158,6 +158,7 @@ public class BalanceController : MonoBehaviour
     {
         if (minigame)
         {
+            player.transform.LookAt(endPosition.transform);
             player.GetComponent<PlayerInput>().enabled = false;
             gameObject.GetComponent<PlayerInput>().enabled = true;
             player.GetComponent<Animator>().SetFloat("Speed", 0);
